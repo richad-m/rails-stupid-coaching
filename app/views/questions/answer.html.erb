@@ -1,0 +1,11 @@
+<p><%= @question %></p>
+<p><em>- You </em></p>
+
+<% answer = "I don't care, get dressed and go to work!"%>
+<% answer = "Great!" if @question == "I am going to work" %>
+<% answer = "Silly question, get dressed and go to work!" if @question.include?("?") %>
+
+<p><%= answer %></p>
+<p><em>- Your coach </em></p>
+
+<%= link_to "Ask a new question", ask_path %>
